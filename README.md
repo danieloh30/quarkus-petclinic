@@ -1,4 +1,4 @@
-# quarkus-petclinic project
+# quarkus-web project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
