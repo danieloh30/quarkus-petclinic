@@ -6773,19 +6773,19 @@ strong {
   border-right: 0;
 }
 .navbar a.navbar-brand {
-  background: url("../images/spring-logo-dataflow.png") -1px -1px no-repeat;
+  background: url("../images/quarkus_logo.png") ;
   margin: 12px 0 6px;
-  width: 229px;
-  height: 46px;
+  width: 260px;
+  height: 44px;
   display: inline-block;
   text-decoration: none;
   padding: 0;
 }
 .navbar a.navbar-brand span {
   display: block;
-  width: 229px;
-  height: 46px;
-  background: url("../images/spring-logo-dataflow.png") -1px -48px no-repeat;
+  width: 260px;
+  height: 44px;
+  background: url("../images/quarkus_logo.png") -1px -41px no-repeat;
   opacity: 0;
   -moz-transition: opacity 0.12s ease-in-out;
   -webkit-transition: opacity 0.12s ease-in-out;
@@ -6837,10 +6837,10 @@ strong {
   .navbar a.navbar-brand {
     display: block;
     margin: 0 auto 0 auto;
-    width: 148px;
-    height: 50px;
+    width: 260px;
+    height: 44px;
     float: none;
-    background: url("../images/spring-logo-dataflow-mobile.png") 0 center no-repeat;
+    background: url("../images/quarkus_logo.png") 0 center no-repeat;
   }
   .homepage-billboard .homepage-subtitle {
     font-size: 21px;
