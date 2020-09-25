@@ -25,4 +25,12 @@ public class Visits extends PanacheEntity {
 	@NotEmpty
 	public String description;
 
+	public Pets getPets() {
+		return this.pets;
+	}
+
+	public void setPets(Pets pets) {
+		this.pets = pets;
+	}
+	
 }
