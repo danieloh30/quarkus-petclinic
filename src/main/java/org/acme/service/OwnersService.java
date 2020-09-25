@@ -16,18 +16,17 @@ import io.quarkus.panache.common.Sort;
 @Consumes(MediaType.APPLICATION_JSON)
 public class OwnersService {
    
-    public List<Owners> getAll() {
-        return Owners.listAll();
-    }
-
     public List<Owners> findByLastName(String lastName) {
-
         if (lastName != null && !lastName.isEmpty()) {
-            Sort sort = Sort.ascending("owner.firstName");
-            return Owners.find("SELECT DISTINCT owner FROM Owners owner left join fetch owner.pets where LOWER(owner.lastName) LIKE LOWER(?1)", sort, "%" + lastName + "%").list();
+            return Owners.find("LOWER(lastName) LIKE LOWER(?1) ", 
+                Sort.by("firstName"), "%" + lastName + "%").list();
         } else {
             return Owners.listAll();
         }        
- 
+    } 
+
+    public Owners findById(Long id) {
+        return Owners.findById(id.longValue());
     }
+
 }

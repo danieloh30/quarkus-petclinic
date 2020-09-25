@@ -2,9 +2,11 @@ package org.acme.model;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
 import javax.persistence.Cacheable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
@@ -13,16 +15,14 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 @Cacheable
 public class Visits extends PanacheEntity {
   
-	@Column(name = "pet_id")
-	public Integer petId;
+	@ManyToOne
+	@JoinColumn(name = "pet_id")
+	public Pets pets;
 
     @Column(name = "visit_date")
-	// @DateTimeFormat(pattern = "yyyy-MM-dd")
 	public LocalDate date;
 
 	@NotEmpty
 	public String description;
-    
-    public Visits() {}
 
 }

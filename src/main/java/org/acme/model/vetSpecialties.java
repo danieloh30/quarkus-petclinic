@@ -8,7 +8,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 @Entity(name = "vet_specialties")
 @Cacheable
-public class vetSpecialties extends PanacheEntity {
+public class VetSpecialties extends PanacheEntity {
 
     @Column(name = "vet_id")
     public Long vetId;

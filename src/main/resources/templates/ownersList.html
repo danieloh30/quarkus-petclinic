@@ -11,18 +11,15 @@
     </tr>
     </thead>
     <tbody>
-        {#for owner in contents.owners} 
+        {#for owner in owners} 
             <tr>
                 <td>
-                    <a href="/owners/{owner.id}">{owner.firstName} {owner.lastName}</a>
+                    <a href="/owners?id={owner.id}">{owner.firstName} {owner.lastName}</a>
                 </td>
                 <td>{owner.address}</td>
                 <td>{owner.city}</td>
                 <td>{owner.telephone}</td>
-                <td>{owner.pets}</td>
-                
-
-                <!-- <td><span th:each="pet : ${owner.pets}" th:text="${pet.name} "/></td> -->
+                <td>{#for pet in owner.pets}{pet.name} {/for}</td>
             </tr>
         {/for}
     </tbody>

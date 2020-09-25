@@ -1,4 +1,4 @@
-{#include header}{/include}
+{#include header/}
 
 <h2>Veterinarians</h2>
 
@@ -10,7 +10,7 @@
     </tr>
     </thead>
     <tbody>
-        {#for vet in contents.vets} 
+        {#for vet in vets} 
             <tr>
                 <td>{vet.firstName} {vet.lastName}</td>      
                 {#if vet.specialties.isEmpty}
@@ -27,4 +27,5 @@
     </tbody>
 </table>
 </div></div>
-{#include footer}{/include}
+
+{#include footer/}
